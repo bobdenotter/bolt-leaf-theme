@@ -1,3 +1,12 @@
 @import "../../node_modules/bulma/bulma.sass";
 
+$baseline: 1.8rem;
+
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: .875rem;
+
 @import "grid.scss";
+@import "typography.scss";

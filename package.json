@@ -23,6 +23,6 @@
   },
   "scripts": {
     "start": "parcel kitchensink.html",
-    "build": "parcel build kitchensink.html --public-url . --out-dir ./assets"
+    "build": "parcel build kitchensink.html --public-url . --out-dir ./assets --no-content-hash"
   }
 }
