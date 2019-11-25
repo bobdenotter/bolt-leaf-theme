@@ -1,0 +1,28 @@
+{
+  "name": "leaf",
+  "version": "1.0.0",
+  "description": "A simple Bolt 4 blog theme",
+  "keywords": [
+    "parcel",
+    "bulma",
+    "bolt",
+    "blog",
+    "weblog",
+    "theme"
+  ],
+  "author": "Bob den Otter <bobdenotter@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.8"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1"
+  },
+  "scripts": {
+    "start": "parcel kitchensink.html",
+    "build": "parcel build kitchensink.html --public-url . --out-dir ./assets"
+  }
+}
