@@ -54,9 +54,11 @@ footer {
     }
 }
 
-a.pagination-link {
-    text-decoration: none;
-}
-a.pagination-link:hover {
-    text-decoration: none !important;
+nav.pagination {
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: none !important;
+    }
 }
