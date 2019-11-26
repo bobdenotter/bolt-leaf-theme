@@ -24,16 +24,11 @@
 
 <div class="container">
 
-    <div class="header">
-    {% if(app.request.get('_route') != 'homepage') %}
-        <h1><a href="/">Leaf Theme 🍃</a></h1>
-    {% else %}
-        <span><a href="/">Leaf Theme 🍃</a></span>
-    {% endif %}
-  </div>
+    {{ include('partials/_header.twig') }}
+
   <div class="sidebar">
-    {# {{ include('partials/_header.twig') }} #}
     {{ include('partials/_aside.twig') }}
+
   </div>
   <div class="main">
 
@@ -42,9 +37,7 @@
 
   </div>
 
-  <div class="footer">
   {{ include('partials/_footer.twig') }}
-  </div>
 
 </div>
 

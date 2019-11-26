@@ -16,7 +16,7 @@
         {{ with_submenu ? ' has-submenu' -}}
         {{ item.current ? ' active' }}">
 
-        <a href="{{ item.uri }}" title='{{ item.title }}' class='{{ item.class }}'>
+        <a href="{{ item.uri }}" title='{{ item.title }}' class='dropdown-item {{ item.class }}'>
             {{- item.label -}}
         </a>
 

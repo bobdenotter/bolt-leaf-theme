@@ -14,23 +14,29 @@ p{
 	margin-bottom: $baseline;
 }
 
-h1, h2, h3, h4, h5, .header span {
+a:hover {
+	text-decoration: underline !important;
+}
+
+h1, h2, h3, h4, h5, header > span {
 	font-weight: 700;
     margin-bottom: $baseline;
     font-family: 'Merriweather', serif;
 }
 
-h1, .header span {
+h1, header > span {
 	font-size: $h1;
 	line-height: $h1 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline});
 
 	a {
 		color: $body-color;
+		text-decoration: none !important;
 	}
 
 	a:hover {
-  		color: $link;
+		color: $link;
+		text-decoration: underline !important;
 	}
 }
 
@@ -38,6 +44,16 @@ h2 {
 	font-size: $h2;
 	line-height: $h2 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
+
+	a {
+		color: $body-color;
+		text-decoration: none !important;
+	}
+
+	a:hover {
+		color: $link;
+		text-decoration: underline !important;
+	}
 }
 
 h3 {

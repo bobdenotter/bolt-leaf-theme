@@ -17,3 +17,46 @@ div.imageholder {
         font-style: italic;
     }
 }
+
+.main a {
+	text-decoration: underline;
+	text-decoration-color: lighten($link, 30);
+}
+
+.main a:hover {
+	color: $link-hover;
+	text-decoration-color: lighten($link-hover, 20);
+}
+
+p.meta {
+
+    font-size: 0.95rem;
+    color: #666;
+
+    img {
+        height: 2.3rem;
+        vertical-align: middle;
+        padding-bottom: 0.1rem;
+    }
+}
+
+
+footer {
+    p {
+        padding-top: 80px;
+        margin: 0;
+        float: right;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+a.pagination-link {
+    text-decoration: none;
+}
+a.pagination-link:hover {
+    text-decoration: none !important;
+}

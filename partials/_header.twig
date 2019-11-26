@@ -1,11 +1,27 @@
-<!-- Header bar -->
 <header>
-    {# the values in the 'config' object are taken directly from the file app/config/config.yml #}
-    <h2><a href="{{ path('homepage') }}">{{ config.get('general/sitename') }}</a></h2>
-    {% if config.has('general/payoff') %}
-        <p>{{ config.get('general/payoff') }}</p>
+    <div class="dropdown is-right is-pulled-right">
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span>Menu</span><span class="icon is-small">☰</span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+                {{ menu(template = 'partials/_sub_menu.twig') }}
+                <hr class="dropdown-divider">
+
+                <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain" style="padding: 0.5rem 1rem">
+                    <input type="search" value="{{ searchTerm|default() }}" placeholder="{{ __('general.phrase.search') }} {{ __('general.phrase.search-ellipsis') }}" name="searchTerm" class="input">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {% if(app.request.get('_route') != 'homepage') %}
+        <h1><a href="/">Leaf Theme 🍃</a></h1>
+    {% else %}
+        <span><a href="/">Leaf Theme 🍃</a></span>
     {% endif %}
 
-    {% include 'helpers/_languageselect.html.twig' with {'type': 'select'} %}
-    <hr>
 </header>
