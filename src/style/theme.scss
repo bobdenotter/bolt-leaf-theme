@@ -1,0 +1,19 @@
+/* Image holder */
+div.imageholder {
+
+    img {
+        border: 1px solid #ccc;
+        padding: 0rem;
+        margin: 1rem 0;
+        display: block;
+
+    }
+
+    small {
+        display: block;
+        text-align: center;
+        font-size: 1.0rem;
+        margin: 1rem 0;
+        font-style: italic;
+    }
+}

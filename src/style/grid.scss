@@ -2,8 +2,8 @@
     grid-area: sidebar;
 }
 
-.content {
-    grid-area: content;
+.main {
+    grid-area: main;
     position: relative;
 }
 
@@ -20,15 +20,17 @@
     grid-gap: 4rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "header  header  header"
-        "sidebar content content"
-        "footer  footer  footer";
+        "header   header  header"
+        "sidebar  main    main"
+        "footer   footer  footer";
     max-width: 1024px;
     padding: 0 2rem;
     margin: auto;
 }
 
 
-.content > h2, .content > h3, .content > h4 {
+.main > h1, .main > h2, .main > h3, .main > h4,
+.sidebar > h1, .sidebar > h2, .sidebar > h3, .sidebar > h4,
+article > h2 {
     margin-top: 0;
 }

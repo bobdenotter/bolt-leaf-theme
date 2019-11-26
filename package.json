@@ -22,7 +22,11 @@
     "parcel-bundler": "^1.8.1"
   },
   "scripts": {
-    "start": "parcel kitchensink.html",
-    "build": "parcel build kitchensink.html --public-url . --out-dir ./assets --no-content-hash"
+    "start": "parcel src/leaf.js src/leaf.scss --public-url . --out-dir ./assets",
+    "build": "npm run build:style; npm run build:script",
+    "build:kitchensink": "parcel build kitchensink.html --public-url . --out-dir ./assets --no-content-hash",
+    "build:script": "parcel build src/leaf.js --public-url . --out-dir ./assets --no-content-hash",
+    "build:style": "parcel build src/leaf.scss --public-url . --out-dir ./assets --no-content-hash",
+    "build:cleanup": "rm assets/leaf.*.*s*"
   }
 }

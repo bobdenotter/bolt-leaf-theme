@@ -14,38 +14,46 @@ p{
 	margin-bottom: $baseline;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .header span {
 	font-weight: 700;
     margin-bottom: $baseline;
     font-family: 'Merriweather', serif;
 }
 
-h1 {
+h1, .header span {
 	font-size: $h1;
-	line-height: $h1;
+	line-height: $h1 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline});
+
+	a {
+		color: $body-color;
+	}
+
+	a:hover {
+  		color: $link;
+	}
 }
 
 h2 {
 	font-size: $h2;
-	line-height: $h2;
+	line-height: $h2 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
 }
 
 h3 {
 	font-size: $h3;
-	line-height: $h3;
+	line-height: $h3 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
 }
 
 h4 {
 	font-size: $h4;
-	line-height: $h4;
+	line-height: $h4 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h4}) + #{$baseline}*2);
 }
 
 h5 {
 	font-size: $h5;
-	line-height: $h5;
+	line-height: $h5 * 1.5;
 	margin-top: calc((#{$baseline} - #{$h5}) + #{$baseline}*2);
 }
