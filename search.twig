@@ -23,9 +23,17 @@
         {% endif %}
 
         <form method="get" action="{{ path('search') }}" id="searchform-main" enctype="text/plain">
-            <input type="search" value="{{ searchTerm|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="searchTerm" >
-            <button type="submit">{{ __('general.phrase.search') }}</button>
+            <div class="field has-addons">
+                <div class="control">
+                    <input type="search" value="{{ searchTerm|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="searchTerm" class="input">
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-primary">{{ __('general.phrase.search') }}</button>
+                </div>
+            </div>
         </form>
+
+        <hr>
 
         {% for record in records %}
             <article>
@@ -33,8 +41,8 @@
                 <h2><a href="{{ record|link }}">{{ record|title }}</a></h2>
 
                 {% if record|image %}
-                    <a href="{{ image(record|image) }}">
-                        <img src="{{ thumbnail(record|image, 400, 260) }}" alt="{{ (record|image).alt|default(record|title) }}">
+                    <a href="{{ record|image }}">
+                        <img src="{{ thumbnail(record, 320, 240, fit='crop') }}" alt="{{ (record|image).alt|default(record|title) }}">
                     </a>
                 {% endif %}
 
