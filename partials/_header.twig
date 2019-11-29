@@ -1,4 +1,4 @@
-<header>
+<header role="banner">
     <div class="dropdown is-right is-pulled-right">
         <div class="dropdown-trigger">
             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -10,7 +10,7 @@
                 {{ menu(template = 'partials/_sub_menu.twig') }}
                 <hr class="dropdown-divider">
 
-                <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain" style="padding: 0.5rem 1rem">
+                <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain" style="padding: 0.5rem 1rem" role="search">
                     <input type="search" value="{{ searchTerm|default() }}" placeholder="{{ __('general.phrase.search') }} {{ __('general.phrase.search-ellipsis') }}" name="searchTerm" class="input">
                 </form>
 

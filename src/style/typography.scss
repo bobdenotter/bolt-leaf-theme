@@ -25,9 +25,15 @@ h1, h2, h3, h4, h5, header > span {
 }
 
 h1, header > span {
-	font-size: $h1;
-	line-height: $h1 * 1.5;
-	margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline});
+	font-size: $h1-mobile;
+	line-height: $h1-mobile * 1.5;
+	margin: 0;
+
+	@media screen and (min-width: 768px) {
+		font-size: $h1;
+		line-height: $h1 * 1.5;
+		margin-top: 0;
+	}
 
 	a {
 		color: $body-color;
@@ -40,10 +46,16 @@ h1, header > span {
 	}
 }
 
-h2 {
-	font-size: $h2;
-	line-height: $h2 * 1.5;
-	margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
+h2, h1.title {
+	font-size: $h2-mobile;
+	line-height: $h2-mobile * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h2-mobile});
+
+	@media screen and (min-width: 768px) {
+		font-size: $h2;
+		line-height: $h2 * 1.5;
+		margin-top: calc((2 * #{$baseline} - #{$h2});
+	}
 
 	a {
 		color: $body-color;
@@ -57,19 +69,46 @@ h2 {
 }
 
 h3 {
-	font-size: $h3;
-	line-height: $h3 * 1.5;
-	margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
+	font-size: $h3-mobile;
+	line-height: $h3-mobile * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h3-mobile});
+
+	@media screen and (min-width: 768px) {
+		font-size: $h3;
+		line-height: $h3 * 1.5;
+		margin-top: calc((2 * #{$baseline} - #{$h3});
+	}
 }
 
 h4 {
-	font-size: $h4;
-	line-height: $h4 * 1.5;
-	margin-top: calc((#{$baseline} - #{$h4}) + #{$baseline}*2);
+	font-size: $h4-mobile;
+	line-height: $h4-mobile * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h4-mobile});
+
+	@media screen and (min-width: 768px) {
+		font-size: $h4;
+		line-height: $h4 * 1.5;
+		margin-top: calc((2 * #{$baseline} - #{$h4});
+	}
 }
 
 h5 {
-	font-size: $h5;
-	line-height: $h5 * 1.5;
-	margin-top: calc((#{$baseline} - #{$h5}) + #{$baseline}*2);
+	font-size: $h5-mobile;
+	line-height: $h5-mobile * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h5-mobile});
+
+	@media screen and (min-width: 768px) {
+		font-size: $h5;
+		line-height: $h5 * 1.5;
+		margin-top: calc((2 * #{$baseline} - #{$h5});
+	}
+}
+
+ol {
+	margin: 0 0 1rem 1.2rem;
+}
+
+ul {
+	margin: 0 0 1rem 1.2rem;
+	list-style-type: disc;
 }

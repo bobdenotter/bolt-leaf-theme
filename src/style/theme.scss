@@ -69,4 +69,11 @@ nav.pagination {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1rem;
     margin: 1rem 0;
-  }
+}
+
+aside, header {
+    ul {
+        margin: 0 0 1rem;
+        list-style-type: none;
+    }
+}

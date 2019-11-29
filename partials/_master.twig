@@ -1,3 +1,8 @@
+{% if config.get('theme/aside_on_detail', true) or app.request.get('_route') != "record" %}
+    {% set aside = 'has-aside' %}
+{% else %}
+    {% set aside = 'no-aside' %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ htmllang() }}">
     <head>
@@ -18,34 +23,22 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i|Open+Sans:400,400i&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/leaf.css') }}">
     </head>
-    <body>
+    <body class="{{ aside }}">
 
+    <div class="container">
 
+            {{ include('partials/_header.twig') }}
 
-<div class="container">
+            {{ include('partials/_aside.twig') }}
 
-    {{ include('partials/_header.twig') }}
+          <main>
+                    {% block main %}
+                    {% endblock main %}
+          </main>
 
-  <div class="sidebar">
-    {{ include('partials/_aside.twig') }}
+          {{ include('partials/_footer.twig') }}
 
-  </div>
-  <div class="main">
-
-            {% block main %}
-            {% endblock main %}
-
-  </div>
-
-  {{ include('partials/_footer.twig') }}
-
-</div>
-
-
-
-
-
-
+        </div>
 
     </body>
     <script src="{{ asset('assets/leaf.js') }}"></script>

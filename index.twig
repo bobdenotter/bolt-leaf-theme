@@ -4,12 +4,12 @@
 
     {% if record|default %}
 
-        <h1><a href="{{ record|link }}">{{ record|title }}</a></h1>
+        <h2><a href="{{ record|link }}">{{ record|title }}</a></h2>
 
         {# Remove this block if you don't need it anymore. #}
         {{ include('partials/_fresh_install.twig') }}
 
-        {{ record|excerpt }}
+        {{ record.teaser }}
 
         {% include 'partials/_image.twig' with ({'image': record|image}) %}
 
