@@ -62,3 +62,11 @@ nav.pagination {
         text-decoration: none !important;
     }
 }
+
+// The "callout" for fresh installs
+.callout {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+  }
