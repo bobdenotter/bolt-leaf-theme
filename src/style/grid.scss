@@ -1,10 +1,9 @@
 aside {
-    grid-area: sidebar;
+    grid-area: aside;
 }
 
 main {
     grid-area: main;
-    xposition: relative;
 }
 
 header {
@@ -15,40 +14,39 @@ footer {
     grid-area: footer;
 }
 
-body.has-aside .container {
-    border: 2px dashed green;
+.container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "header"
         "main"
-        "sidebar"
+        "aside"
         "footer";
-    max-width: 1124px;
+    max-width: 600px;
     padding: 0 1rem;
     margin: auto;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 800px) {
         display: grid;
         grid-gap: 3rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-            "header   header  header"
-            "sidebar  main    main"
-            "footer   footer  footer";
+            "header  header  header"
+            "aside   main    main"
+            "footer  footer  footer";
         max-width: 1124px;
         padding: 0 2rem;
         margin: auto;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1050px) {
         display: grid;
-        grid-gap: 6rem;
+        grid-gap: 4rem 6rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-            "header   header  header"
-            "sidebar  main    main"
-            "footer   footer  footer";
+            "header  header  header"
+            "aside   main    main"
+            "footer  footer  footer";
         max-width: 1124px;
         padding: 0 2rem;
         margin: auto;
@@ -56,48 +54,25 @@ body.has-aside .container {
 }
 
 
-body.no-aside .container {
-    border: 2px dashed crimson;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
+body.no-aside {
+    .container {
+        grid-template-areas:
             "header"
             "main"
-            "."
             "footer";
-    max-width: 1124px;
-    padding: 0 1rem;
-    margin: auto;
 
-    @media screen and (min-width: 768px) {
-        display: grid;
-        grid-gap: 3rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-                "header   header  header"
-                ".  main    ."
-                "footer   footer  footer";
-        max-width: 1124px;
-        padding: 0 2rem;
-        margin: auto;
+        @media screen and (min-width: 800px) {
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-areas:
+                "header  header  header"
+                ".       main    ."
+                "footer  footer  footer";
+        }
     }
 
-    @media screen and (min-width: 1024px) {
-        display: grid;
-        grid-gap: 6rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-                "header   header  header"
-                ".  main    ."
-                "footer   footer  footer";
-        max-width: 1124px;
-        padding: 0 2rem;
-        margin: auto;
+    aside {
+        display: none;
     }
-}
-
-body.no-aside aside {
-    display: none;
 }
 
 .main > h1, .main > h2, .main > h3, .main > h4,
