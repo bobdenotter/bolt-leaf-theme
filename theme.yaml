@@ -1,7 +1,7 @@
 # Optional config file for the theme.
 
 aside_on_detail: false
-
+show_welcome_callout: true
 
 # Variables that are in this file, can be used in your twig template like {{ theme.foo }}
 
