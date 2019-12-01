@@ -18,10 +18,10 @@
         </div>
     </div>
 
-    {% if(app.request.get('_route') != 'homepage') %}
-        <h1><a href="/">{{ config.get('general/sitename') }}</a></h1>>
+    {% if (app.request.get('_route') != 'homepage') %}
+        <h1><a href="/">{{ config.get('general/sitename') }}</a></h1>
     {% else %}
-        <span><a href="/">{{ config.get('general/sitename') }}</a></span>>
+        <span><a href="/">{{ config.get('general/sitename') }}</a></span>
     {% endif %}
 
 </header>
