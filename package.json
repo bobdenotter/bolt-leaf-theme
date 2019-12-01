@@ -13,7 +13,8 @@
   "author": "Bob den Otter <bobdenotter@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.8"
+    "bulma": "^0.8",
+    "prismjs": "^1.17.1"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",

@@ -2,7 +2,7 @@
     <div class="dropdown is-right is-pulled-right">
         <div class="dropdown-trigger">
             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                <span>Menu</span><span class="icon is-small">☰</span>
+                <span class="icon is-small" aria-hidden="true">☰</span><span>Menu</span>
             </button>
         </div>
         <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -19,9 +19,9 @@
     </div>
 
     {% if(app.request.get('_route') != 'homepage') %}
-        <h1><a href="/">Leaf Theme 🍃</a></h1>
+        <h1><a href="/">{{ config.get('general/sitename') }}</a></h1>>
     {% else %}
-        <span><a href="/">Leaf Theme 🍃</a></span>
+        <span><a href="/">{{ config.get('general/sitename') }}</a></span>>
     {% endif %}
 
 </header>

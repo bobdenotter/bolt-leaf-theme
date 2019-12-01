@@ -1,5 +1,8 @@
 @import "./style/variables.scss";
 @import "../node_modules/bulma/bulma.sass";
+@import '../node_modules/prismjs/themes/prism';
+@import '../node_modules/prismjs/plugins/line-numbers/prism-line-numbers';
+@import '../node_modules/prismjs/plugins/line-highlight/prism-line-highlight';
 
 @import "./style/grid.scss";
 @import "./style/typography.scss";

@@ -4,6 +4,8 @@ aside {
 
 main {
     grid-area: main;
+    // @see: https://css-tricks.com/preventing-a-grid-blowout/
+    min-width: 0;
 }
 
 header {
@@ -62,7 +64,7 @@ body.no-aside {
             "footer";
 
         @media screen and (min-width: 800px) {
-            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: 1fr 6fr 1fr;
             grid-template-areas:
                 "header  header  header"
                 ".       main    ."

@@ -1,15 +1,22 @@
-html {
+html, body {
 	font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: 'Open Sans', sans-serif;
-}
-
-body {
+	font-size: $basefontsize-mobile;
 	line-height: $baseline;
-	padding: $baseline 0;
+	padding: $baseline * 0.5 0;
+
+	@media screen and (min-width: 800px) {
+		font-size: $basefontsize-medium;
+	}
+	@media screen and (min-width: 1050px) {
+		font-size: $basefontsize;
+	}
 }
 
-p{
+
+
+p {
 	line-height: $baseline;
 	margin-bottom: $baseline;
 }
@@ -20,20 +27,14 @@ a:hover {
 
 h1, h2, h3, h4, h5, header > span {
 	font-weight: 700;
-    margin-bottom: $baseline;
+    margin-bottom: $baseline * 0.5;
     font-family: 'Merriweather', serif;
 }
 
 h1, header > span {
-	font-size: $h1-mobile;
-	line-height: $h1-mobile * 1.5;
+	font-size: $h1;
+	line-height: $h1 * 1.5;
 	margin: 0;
-
-	@media screen and (min-width: 768px) {
-		font-size: $h1;
-		line-height: $h1 * 1.5;
-		margin-top: 0;
-	}
 
 	a {
 		color: $body-color;
@@ -47,15 +48,9 @@ h1, header > span {
 }
 
 h2, h1.title {
-	font-size: $h2-mobile;
-	line-height: $h2-mobile * 1.5;
-	margin-top: calc((2 * #{$baseline} - #{$h2-mobile});
-
-	@media screen and (min-width: 768px) {
-		font-size: $h2;
-		line-height: $h2 * 1.5;
-		margin-top: calc((2 * #{$baseline} - #{$h2});
-	}
+	font-size: $h2;
+	line-height: $h2 * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h2});
 
 	a {
 		color: $body-color;
@@ -69,39 +64,23 @@ h2, h1.title {
 }
 
 h3 {
-	font-size: $h3-mobile;
-	line-height: $h3-mobile * 1.5;
-	margin-top: calc((2 * #{$baseline} - #{$h3-mobile});
+	font-size: $h3;
+	line-height: $h3 * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h3});
 
-	@media screen and (min-width: 768px) {
-		font-size: $h3;
-		line-height: $h3 * 1.5;
-		margin-top: calc((2 * #{$baseline} - #{$h3});
-	}
 }
 
 h4 {
-	font-size: $h4-mobile;
-	line-height: $h4-mobile * 1.5;
-	margin-top: calc((2 * #{$baseline} - #{$h4-mobile});
+	font-size: $h4;
+	line-height: $h4 * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h4});
 
-	@media screen and (min-width: 768px) {
-		font-size: $h4;
-		line-height: $h4 * 1.5;
-		margin-top: calc((2 * #{$baseline} - #{$h4});
-	}
 }
 
 h5 {
-	font-size: $h5-mobile;
-	line-height: $h5-mobile * 1.5;
-	margin-top: calc((2 * #{$baseline} - #{$h5-mobile});
-
-	@media screen and (min-width: 768px) {
-		font-size: $h5;
-		line-height: $h5 * 1.5;
-		margin-top: calc((2 * #{$baseline} - #{$h5});
-	}
+	font-size: $h5;
+	line-height: $h5 * 1.5;
+	margin-top: calc((2 * #{$baseline} - #{$h5});
 }
 
 ol {
@@ -111,4 +90,31 @@ ol {
 ul {
 	margin: 0 0 1rem 1.2rem;
 	list-style-type: disc;
+}
+
+blockquote {
+	border-left: 4px solid #CCC;
+	background: #F8F8F8;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+}
+
+
+// Fix Prism styles.
+code[class*="language-"], code, pre {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+pre {
+	.tag {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		display: inherit;
+		font-size: inherit;
+	}
+	.number {
+		font-size: 1em;
+	}
 }
