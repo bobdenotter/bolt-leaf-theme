@@ -6,10 +6,10 @@
 
 {# check if we have a title. If so, we know we have content to display. Otherwise, we will
     output a default text, telling the user to create the 'blocks' in the backend. #}
-{% if block.title is defined %}
+{% if block %}
 
-    <h4>{{ block.title }}</h4>
-    {{ block.content }}
+    <h4>{{ block|title }}</h4>
+    <p>{{ block.content|default(block|excerpt) }}</p>
 
     {% set edit_link = block|edit_link %}
     {% set content_link = block|link %}

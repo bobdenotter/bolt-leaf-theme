@@ -1,9 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
-
-
-
 {% block main %}
+
     <h1 class="title">{{ record|title }}</h1>
 
     {% include 'partials/_image.twig' with ({'image': record|image}) %}
@@ -15,11 +13,10 @@
         {{ block('sub_fields', 'helpers/_fields.twig') }}
     {% endwith %}
 
-    {# Uncomment this if you wish to dump the entire record to the client, for debugging purposes.
+    {% include 'partials/_recordfooter.twig' with { 'record': record, 'extended': true } %}
+    
+    {# Uncomment this if you wish to dump the entire record to the client, for debugging purposes. 
     {{ dump(record) }}
     #}
-        {% include 'partials/_recordfooter.twig' with { 'record': record, 'extended': true } %}
-
-
 
 {% endblock main %}
