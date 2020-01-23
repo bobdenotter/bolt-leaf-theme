@@ -1,6 +1,8 @@
 Leaf Theme 🍃
 =============
 
+For Bolt 4 - https://boltcms.io
+
 Setup:
 
 ```
