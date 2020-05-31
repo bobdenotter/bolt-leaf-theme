@@ -44,7 +44,7 @@
         </p>
     {% endif %}
 
-    {% set related_content_types = record|related_all %}
+    {% set related_content_types = record|related_by_type %}
     {% if related_content_types is not empty %}
             {% for content_type, related_records in related_content_types %}
             <h4>Related {{ config.get('contenttypes/' ~ content_type ~ '/name') }}</h4>
