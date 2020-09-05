@@ -64,7 +64,7 @@ body.no-aside {
             "footer";
 
         @media screen and (min-width: 800px) {
-            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-columns: 0fr 6fr 0fr;
             grid-template-areas:
                 "header  header  header"
                 ".       main    ."

@@ -34,18 +34,19 @@
 
     {% include 'helpers/_languageselect.html.twig' with {'type': 'list'} %}
 
-    {# The next section iterates over all of the content types, and prints a list
-        of the five latest records of each of them. The 'magic' happens in the
-        setcontent tag.. ct.slug ~ "/latest/3" concatenates the slug of the
-        content type with /latest/3, so it becomes something like "pages/latest/3".
-        The 'else' in the inner for-loop is only used if there are no 'records',
+    {# The next section iterates over all of the ContentTypes, and prints a
+        list of the three latest records of each of them. The 'magic' happens in
+        the setcontent tag: `ct.slug latest limit 3` fetches 3 records from the
+        given ContentType, ordered by their descending id.
+        The `else` in the inner for-loop is only used if there are no 'records',
         so we can use it to print a helpful message.
-        Lastly, "path('listing', {'contentTypeSlug': ct.slug})" will output something like '/pages',
-        effectively creating a working link to that contenttype's listing page. #}
+        Lastly, `path('listing', {'contentTypeSlug': ct.slug})` will output
+        something like '/pages', effectively creating a working link to that
+        ContentTypes's listing page. #}
 
-    {% for ct in config.get('contenttypes')|filter(ct => not ct.viewless) %}
+    {% for ct in config.get('contenttypes')|filter(ct => not ct.viewless and not ct.singleton) %}
 
-        {% setcontent records = ct.slug ~ "/latest/3" %}
+        {% setcontent records = ct.slug latest limit 3 %}
 
         <h4>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.name}) }}</h4>
         <ul>

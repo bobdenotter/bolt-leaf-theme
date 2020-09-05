@@ -1,5 +1,5 @@
 {% for type, taxonomies in record|taxonomies %}
     {% for taxonomy in taxonomies %}
-        <span class="tag"><a href="{{ taxonomy.link }}" class="taxonomy-{{ type }}">{{ taxonomy.name }}</a></span>
+        <span class="tag"><a href="{{ taxonomy|link }}" class="taxonomy-{{ type }}">{{ taxonomy.name }}</a></span>
     {% endfor %}
 {% endfor %}
