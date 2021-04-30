@@ -2,7 +2,7 @@
     "name": "bobdenotter/bolt-leaf-theme",
     "description": "🍃 Leaf Theme for Bolt",
     "type": "bolt-theme",
-    "homepage": "http://boltcms.io",
+    "homepage": "https://github.com/bobdenotter/bolt-leaf-theme",
     "keywords": [
         "Theme",
         "Bolt",
@@ -11,15 +11,16 @@
     ],
     "license": "MIT",
     "require": {
+        "bolt/core": "^4.1 || ^5.0",
         "twig/twig": "^2.0 || ^3.0"
-    },
-    "conflict": {
-        "bolt/bolt": "< 3.999"
     },
     "extra": {
         "screenshots": [
             "screenshots/screenshot1.png",
             "screenshots/screenshot2.png"
+        ],
+        "themes": [
+            "leaf"
         ]
     }
 }
