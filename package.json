@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "bulma": "^0.9",
-    "prismjs": "^1.23.0"
+    "prismjs": "^1.24.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
